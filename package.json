@@ -1,6 +1,6 @@
 {
   "name": "frontend-task",
-  "hompage": "https://arpanamishra94.github.io/FrontendTask/",
+  "homepage": "https://arpanamishra94.github.io/FrontendTask/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
