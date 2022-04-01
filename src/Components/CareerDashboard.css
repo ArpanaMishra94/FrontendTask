@@ -1,0 +1,113 @@
+.careerDashboard{
+    background-color: #e5e5e5;
+    height: 300vh;
+
+}
+.careerDashboard > h2{
+    position: absolute;
+width: 481px;
+height: 70px;
+left: 623px;
+top: 148px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 70px;
+
+color: #000000;
+
+}
+.title {
+    position: absolute;
+width: 954px;
+height: 71px;
+left: 75px;
+top: 278px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.employment {
+    position: absolute;
+width: 528px;
+height: 71px;
+left: 1118px;
+top: 278px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.location {
+    position: absolute;
+width: 274px;
+height: 71px;
+left: 76px;
+top: 381px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.job {
+    position: absolute;
+width: 436px;
+height: 71px;
+left: 374px;
+top: 381px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.workplace {
+    position: absolute;
+width: 397px;
+height: 71px;
+left: 834px;
+top: 381px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.paid {
+    position: absolute;
+width: 397px;
+height: 71px;
+left: 1255px;
+top: 381px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.shortDesc {
+    position: absolute;
+width: 1577px;
+height: 99px;
+left: 75px;
+top: 559px;
+
+background: rgba(196, 196, 196, 0.5);
+border-radius: 20px;
+}
+.addJobDesc > img{
+    position: absolute;
+width: 1578px;
+height: 835px;
+left: 75px;
+top: 730px;
+border-radius: 20px;
+/* background: url(Screenshot 2022-03-22 at 11.50.png); */
+/* backgroundImage: url(Screenshot 2022-03-22 at 11.50.png); */
+/* background: url(Screenshot 2022-03-22 at 11.50.png); */
+
+}
+.submit {
+    position: absolute;
+width: 233px;
+height: 92px;
+left: 1413px;
+top: 1597px;
+
+background: #C4C4C4;
+border-radius: 20px;
+}

@@ -1,0 +1,131 @@
+.feetWingsNav {
+    position: absolute;
+width: 1728px;
+height: 88px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+}
+.feetWingsLogo {
+    position: absolute;
+width: 199px;
+height: 48px;
+left: 20px;
+top: 20px;
+
+}
+.ourProducts{
+    position: absolute;
+width: 152px;
+height: 30px;
+left: 938px;
+top: 29px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+
+color: #000000;
+
+}
+.insights{
+    position: absolute;
+width: 93px;
+height: 30px;
+left: 1135px;
+top: 29px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+
+color: #000000;
+
+}
+.smartYarn{
+    position: absolute;
+width: 129px;
+height: 30px;
+left: 1273px;
+top: 29px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+
+color: #000000;
+
+}
+.about{
+    position: absolute;
+width: 70px;
+height: 30px;
+left: 1447px;
+top: 29px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+
+color: #000000;
+
+}
+.contact {
+    position: absolute;
+width: 91px;
+height: 30px;
+left: 1562px;
+top: 29px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 30px;
+
+color: #000000;
+
+}
+
+/* .feetWingsNav{
+    background-color: white;
+    display: grid;
+    height: 3rem;
+    width: 100%;
+    grid-template-columns: 1fr 24fr 24fr 1fr;
+}
+.feetWingsLogoText{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-column: 2/3;
+    height: 3rem;
+}
+.feetWingsLogo{
+    width: 36px;
+}
+.feetWingsLogoText > h4{
+    margin-left: 5px;
+    font-size: 28px;
+    color: gray;
+    font-weight: 500;
+ }
+.feetWingsInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3rem;
+}
+.feetWingsInfo > h4 {
+    font-size: 28px;
+    font-weight: 400;
+} */
