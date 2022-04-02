@@ -1,6 +1,7 @@
 .feetWingsNav {
-    position: absolute;
-width: 1728px;
+    /* position: absolute; */
+    width: 100%;
+/* width: 1728px; */
 height: 88px;
 left: 0px;
 top: 0px;
@@ -14,6 +15,9 @@ height: 48px;
 left: 20px;
 top: 20px;
 
+}
+.feetWingsLogoText:hover {
+    cursor: pointer;
 }
 .ourProducts{
     position: absolute;

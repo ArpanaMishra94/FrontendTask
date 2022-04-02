@@ -1,26 +1,108 @@
 .careerDashboard{
     background-color: #e5e5e5;
-    height: 300vh;
-
+    height: 180vh;
+    width: 100%;
 }
-.careerDashboard > h2{
-    position: absolute;
-width: 481px;
-height: 70px;
-left: 623px;
-top: 148px;
 
+.heading{
+width: 100%;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 60px;
 line-height: 70px;
-
 color: #000000;
-
+display: grid;
+align-content: center;
+height: 20vh;
 }
+.dashboardRow1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 60rem 6rem 42rem 3rem; 
+    height: 8vh;
+}
+
 .title {
-    position: absolute;
+    /* padding: 20px 30px; */
+    margin: 8px 0;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    grid-column: 2/3;
+    }
+.employment {
+    margin: 8px 0;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    grid-column: 4/5;
+    }
+.dashboardRow2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 19rem 2rem 28rem 2rem 28rem 2rem 27rem 3rem;
+    height: 8vh;
+}
+.location{
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    margin: 8px 0;
+    grid-column: 2/3;
+}
+.job{
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    margin: 8px 0;
+    grid-column: 4/5;
+}
+.workplace{
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    margin: 8px 0;
+    grid-column: 6/7;
+}
+.paid{
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    margin: 8px 0;
+    grid-column: 8/9;
+}
+.dashboardRow3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 108rem 3rem;
+    
+}
+.shortDesc{
+    margin: 70px 0px 40px 0px;
+    grid-column: 2/3;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 20px;
+    height: 7vh;
+}
+.addJobDesc > img{
+   width: 95%;
+   border-radius: 20px;
+}
+.dashboardSubmit_link {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3rem 108rem 3rem;
+}
+.dashboardSubmit_link > button {
+   background: #C4C4C4;
+   border-radius: 20px;
+   height: 10vh;
+    width: 10%;
+    margin-left: 85%;
+    margin-top: 2%;
+    display: inline-block;
+    grid-column: 2/3;;
+}
+.dashboardSubmit_link > button:hover{
+   cursor: pointer;
+}
+/* .title {
+position: absolute;
 width: 954px;
 height: 71px;
 left: 75px;
@@ -96,9 +178,7 @@ height: 835px;
 left: 75px;
 top: 730px;
 border-radius: 20px;
-/* background: url(Screenshot 2022-03-22 at 11.50.png); */
-/* backgroundImage: url(Screenshot 2022-03-22 at 11.50.png); */
-/* background: url(Screenshot 2022-03-22 at 11.50.png); */
+
 
 }
 .submit {
@@ -110,4 +190,9 @@ top: 1597px;
 
 background: #C4C4C4;
 border-radius: 20px;
+} */
+.test{
+   font-size: larger;
+   height: 20vh;
+   color: #000000;
 }

@@ -1,160 +1,193 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import {Link} from 'react-router-dom';
 import './CareerDashboard.css';
 import JobRoleDesc from './JobRoleDesc';
+import Form from 'react-bootstrap/Form'
 
 export default function CareerDashboard() {
-const [input, setInput] = useState({
-    title: "",
-    employmentType: "",
-    location: "",
-    jobSection: "",
-    workplaceType: "",
-    shortDesc: "",
-    paidOrGratis: ""
-});
-const [records, setRecords] = useState([]);
-const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    console.log(name, value);
-    setInput({...input, [name] : value})
-}
-const handleSubmit = (e) => {
-    e.preventDefault();
-    const newRecord = {...input, id: new Date().getTime().toString()}
-    console.log(records);
-    setRecords([...records, newRecord]);
-}
-
-
-//     const [title, setTitle] = useState('');
-//     const handleTitle = (event) => {
-//         setTitle(event.target.value);
-//   };
-
-//     const [employmentType, setEmploymentType] = useState('');
-//     const handleEmploymentType = (event) => {
-//         setEmploymentType(event.target.value);
-//   };
-
-//   const [location, setLocation] = useState('');
-//     const handleLocation = (event) => {
-//         setLocation(event.target.value);
-//   };
-  
-//     const [jobSection, setJobSection] = useState('');
-//     const handleJobSection = (event) => {
-//         setJobSection(event.target.value);
-//   };
-
-//   const [workplaceType, setWorkplaceType] = useState('');
-//     const handleWorkplaceType = (event) => {
-//         setWorkplaceType(event.target.value);
-//   };
-
-//   const [value, setValue] = useState('');
-//     const handleChange = (event) => {
-//         setValue(event.target.value);
-//   };
-
-//   const [shortDesc, setShortDesc] = useState('');
-//   const handleShortDesc = (event) => {
-//       setShortDesc(event.target.value);
-// };
+    const [input, setInput] = useState({
+        title: "",
+        employmentType: "",
+        location: "",
+        jobSection: "",
+        workplaceType: "",
+        shortDesc: "",
+        paidOrGratis: ""
+    });
+    const handleInput = (e, key) => {
+        const value = e.target.value;
+        input[key] = value;
+        setInput({
+            ...input
+            
+        })
+        console.log(key, value);
+    }
+    const [records, setRecords] = useState([]);
+    const handleSubmit = (e) => {
+        console.log('you clicked submit');
+        e.preventDefault();
+        const newRecord = {
+            ...input,
+            id: new Date().getTime().toString()
+        }
+        console.log(records);
+        setRecords([
+            ...records,
+            newRecord
+        ]);
+        
+    }
+   
     return (
         <div className="careerDashboard">
-        <form onSubmit={handleSubmit}> 
-            <h2>Career Dashboard</h2>
-            <div className="row1">
-                <input name = "title" className="title" value = {input.title} onChange = {handleInput} placeholder="Title" type="text" />
-               
-                <FormControl className="employment">
-                <InputLabel  id="demo-simple-select-label">Employment type( Option Choose )</InputLabel>
-                <Select labelId="demo-simple-select-label" id="demo-simple-select"
-                    value={input.employmentType}
-                    label="Employment type( Option Choose )"
-                    onChange={handleInput}>
-                    
-                    <MenuItem value={'full-time'}>Full-time</MenuItem>
-                    <MenuItem value={'part-time'}>Part-time</MenuItem>
-                    <MenuItem value={'contract'}>Contract</MenuItem>
-                    <MenuItem value={'temporary'}>Temporary</MenuItem>
-                    <MenuItem value={'voluntary'}>Voluntary</MenuItem>
-                    <MenuItem value={'internship'}>Internship</MenuItem>
-                </Select>
-            </FormControl>
-               
+
+            <div className="heading">
+                <span>Career Dashboard</span>
             </div>
-            <div className="row2">
-                <input name = "location" className="location" value = {input.location} onChange = {handleInput} placeholder="Location" type="text"/>
+            
+            <div className="dashboardRow1">
 
-                <FormControl className="job">
-                <InputLabel  id="demo-simple-select-label">Job Section ( Option Choose )</InputLabel>
-                <Select labelId="demo-simple-select-label" id="demo-simple-select"
-                    value={input.jobSection}
-                    label="Job Section ( Option Choose )"
-                    onChange={handleInput}>
-                    <MenuItem value={'business systems'}>Business Systems</MenuItem>
-                    <MenuItem value={'design'}>Design</MenuItem>
-                    <MenuItem value={'engineering'}>Engineering</MenuItem>
-                    <MenuItem value={'finance'}>Finance</MenuItem>
-                    <MenuItem value={'human resources'}>Human Resources</MenuItem>
-                    <MenuItem value={'legal'}>Legal</MenuItem>
-                    <MenuItem value={'marketing'}>Marketing</MenuItem>
-                    <MenuItem value={'operations'}>Operations</MenuItem>
-                    <MenuItem value={'product'}>Product</MenuItem>
-                    <MenuItem value={'sales'}>Sales</MenuItem>
-                    <MenuItem value={'security'}>Security</MenuItem>
-                    <MenuItem value={'support'}>Support</MenuItem>
-                </Select>
-            </FormControl>
+                <Form.Control size="lg" autoComplete="off" name="title" className="title"
+                    value={
+                        input.title
+                    }
+                    onChange=
+                    {(e) => handleInput(e, e.target.name)}
+                    type="text"
+                    placeholder="Title"/>
 
-                
+                <Form.Select className="employment"
+                    value={
+                        input.employmentType
+                    }
+                    onChange={
+                        (e) => handleInput(e, "employmentType")
+                }>
+                    <option>Employment type( Option Choose )</option>
+                    <option value={'full-time'}>Full-time</option>
+                    <option value={'part-time'}>Part-time</option>
+                    <option value={'contract'}>Contract</option>
+                    <option value={'temporary'}>Temporary</option>
+                    <option value={'voluntary'}>Voluntary</option>
+                    <option value={'internship'}>Internship</option>
+                </Form.Select>
+               </div>
+            <div className="dashboardRow2">
+                <Form.Control size="lg" autoComplete="off" name="location" className="location"
+                    value={
+                        input.location
+                    }
+                    onChange= {(e) => handleInput(e, e.target.name)}
+                    type="text"
+                    placeholder="Location"/> 
 
-                <FormControl className="workplace">
-                <InputLabel  id="demo-simple-select-label">WorkPlace Type ( Option Choose )</InputLabel>
-                <Select labelId="demo-simple-select-label" id="demo-simple-select"
-                    value={input.workplaceType}
-                    label="WorkPlace Type ( Option Choose )"
-                    onChange={handleInput}>
-                    <MenuItem value={'on site'}>On-site</MenuItem>
-                    <MenuItem value={'hybrid'}>Hybrid</MenuItem>
-                    <MenuItem value={'remote'}>Remote</MenuItem>
-                </Select>
-            </FormControl>
+                <Form.Select className="job"
+                    value={
+                        input.jobSection
+                    }
+                    onChange={
+                        (e) => handleInput(e, "jobSection")
+                }>
+                    <option>Job Section ( Option Choose )</option>
+                    <option value={'business systems'}>Business Systems</option>
+                    <option value={'design'}>Design</option>
+                    <option value={'engineering'}>Engineering</option>
+                    <option value={'finance'}>Finance</option>
+                    <option value={'human resources'}>Human Resources</option>
+                    <option value={'legal'}>Legal</option>
+                    <option value={'marketing'}>Marketing</option>
+                    <option value={'operations'}>Operations</option>
+                    <option value={'product'}>Product</option>
+                    <option value={'sales'}>Sales</option>
+                    <option value={'security'}>Security</option>
+                    <option value={'support'}>Support</option>
+                </Form.Select>
 
-                
-                <FormControl className="paid">
-                <InputLabel  id="demo-simple-select-label">Paid / Gratis ( Option Choose )</InputLabel>
-                <Select labelId="demo-simple-select-label" id="demo-simple-select"
-                    value={input.paidOrGratis}
-                    label="Paid / Gratis ( Option Choose )"
-                    onChange={handleInput}>
-                    <MenuItem value={'paid'}>Paid</MenuItem>
-                    <MenuItem value={'gratis'}>Gratis</MenuItem>
-                </Select>
-            </FormControl>
+                <Form.Select className="workplace"
+                    value={
+                        input.workplaceType
+                    }
+                    onChange={
+                        (e) => handleInput(e, "workplaceType")
+                }>
+                    <option>WorkPlace Type ( Option Choose )</option>
+                    <option value={'on site'}>On-site</option>
+                    <option value={'hybrid'}>Hybrid</option>
+                    <option value={'remote'}>Remote</option>
+                </Form.Select>
 
+              <Form.Select className="paid"
+                    value={
+                        input.paidOrGratis
+                    }
+                    onChange={
+                        (e) => handleInput(e, "paidOrGratis")
+                }>
+                    <option>Paid / Gratis ( Option Choose )</option>
+                    <option value={'paid'}>Paid</option>
+                    <option value={'gratis'}>Gratis</option>
+                </Form.Select>
 
-            </div>
-            <div className="row3">
-                <input name = "shortDesc" className="shortDesc" value = {input.shortDesc} onChange = {handleInput} placeholder="Short Desciption ( 150 Words )" type="text"/>
-            </div>
+                </div>
+            <div className="dashboardRow3">
+                <Form.Control autoComplete="off" name="shortDesc" className="shortDesc"
+                    value={
+                        input.shortDesc
+                    }
+                    onChange=
+                    {(e) => handleInput(e, e.target.name)}
+                    placeholder="Short Desciption ( 150 Words )"
+                    type="text"/> 
+                    </div>
             <div className="addJobDesc">
                 <img src="https://s3-alpha-sig.figma.com/img/1896/1663/178fd68f26a588cd90df1c02001613b3?Expires=1649635200&Signature=Ym4HKV~nUobWvTgWn0PpgxO1XLcSaC0vOTx~~jtMcqAn~qK8Rf9Ri3Nfqj9NxhGG-a~axBqMQ6HaQJa4Zj1u7E4o-Ig-X1hHKv~U9Cbdp3bHl~JXqYP65ZKQhXlJBdWlOfkWyAfpXj2omliiVJJKwsnsA0Y55ZR4A~J3uRVEprmLZ2OetoBDm4WlMW9DMEusx7CB-Io7ti12hg2KL2N9w8u9VVIl9nO~Pxx7kMncvWW6NgCgNFhnR1Dk9tq96nEMc2FY0c~JHaax3B9RvVPMGyqrLjCPtmPuGgQ6bX-uIp0fc5wdHBJk2IAYOIxnDbOV4oC7HWu47u51yRVXwgKSNQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"/>
             </div>
+           
+           
             
-                 <button className="submit">Submit</button>
+            <Link to ="/submit" className = "dashboardSubmit_link">
+                    <button onSubmit = {handleSubmit} className="submit">
+                        Submit
+                    </button>
+                 </Link>
+           
+                 
+                 {
+            records.map ((e) => {
+               return (
+                     <JobRoleDesc key ={e.id}
+                         title = {e.title}
+                         employmentType = {e.employmentType}
+                         location = {e.location}
+                         jobSection = {e.jobSection}
+                         workplaceType = {e.workplaceType}
+                         shortDesc = {e.shortDesc}
+                         paidOrGratis = {e.paidOrGratis}
+                     />
+                );
+            })
+        } 
+                
+              
+             
+                  {/* {
+                     records.map ((e) => {
+                        return (
+                              <JobRoleDesc key ={e.id}
+                                  title = {e.title}
+                                  employmentType = {e.employmentType}
+                                  location = {e.location}
+                                  jobSection = {e.jobSection}
+                                  workplaceType = {e.workplaceType}
+                                  shortDesc = {e.shortDesc}
+                                  paidOrGratis = {e.paidOrGratis}
+                              />
+                         );
+                     })
+                 }  */}
           
 
-                
-            </form>
-            
         </div>
     );
 }
