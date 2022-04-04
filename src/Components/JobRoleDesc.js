@@ -1,36 +1,54 @@
 import React from 'react';
 import './JobRoleDesc.css';
-import CareerDashboard from './CareerDashboard';
-export default function JobRoleDesc(props) {
+import Navbar from './Navbar';
+import {useLocation} from "react-router-dom";
+
+export default function JobRoleDesc() {
+    const location = useLocation();
+    const data = location.state;
+
     return (
+        
         <div className="jobRoleDesc">
-        <div className = "jobRoleHeading">
-        {/* <span className="businessSystem">{props.title}</span> */}
-           <span className="businessSystem">Business System</span>
-           {/* <span className="businessSystem">Business System</span>
-           <span className="businessSystem">Business System</span>
-           <span className="businessSystem">Business System</span> */}
-        </div>
-            
+            <Navbar/>
+            <div className = "job">
+            <div className="jobSection">
+                <span className="jobSectionName">
+                    {
+                    data.jobSection
+                }</span>
+            </div>
             <div className="desc">
                 <div className="row1">
-                {/* <p className="row1_heading">{}</p> */}
-                    <p className="row1_heading">Business Systems Analyst - Financial Systems</p>
-                    {/* <span classId="title">(Title)</span> */}
+                    <p className="row1_heading">
+                        {
+                        data.title
+                    }</p>
                 </div>
 
                 <div className="row2">
-                    <p className="para">Systems team to help expand and maintain our Order to Cash applications and its ecosystem. Your
-                        <br/>
-                        role will be to help implement, administer, and optimize our business systems and assist with
-                        <br/>
-                        business process</p>
+                    <p className="para">
+                        {
+                        data.shortDesc
+                    }</p>
+                    
+                    <div className = "paidOrGratis">
+                           <h4 className={(data.paidOrGratis == 'Paid'? 'paidOrGratisSelected' : 'paidOrGratisNotSelected')}>
+                           $ Paid
+                           </h4>
+                           <h4 className={(data.paidOrGratis == 'Gratis'? 'paidOrGratisSelected' : 'paidOrGratisNotSelected')}>
+                           ❤ Gratis
+                           </h4>
+                       
+                    </div>
                 </div>
-                <div className = "row3">
-                    <span>Remote / Hybrid</span>
+                <div className="row3">
+                    <span>{
+                        data.workplaceType
+                    }</span>
                 </div>
-
-                </div>
+            </div>
+        </div>
         </div>
     );
 }

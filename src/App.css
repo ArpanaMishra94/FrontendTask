@@ -1,9 +1,7 @@
-*{
-  margin: 0px;
-}
 .App {
   text-align: center;
-  /* display: flex; */
-/* justify-content: center; */
+ }
+body{
+  margin: 0;
+  padding: 0;
 }
-

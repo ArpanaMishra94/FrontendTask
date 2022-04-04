@@ -1,76 +1,98 @@
 .careerDashboard{
-    background-color: #e5e5e5;
-    height: 180vh;
+    background-color: #f0f0f0;
+    height: 100%;
     width: 100%;
 }
-
 .heading{
-width: 100%;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 60px;
-line-height: 70px;
-color: #000000;
-display: grid;
-align-content: center;
-height: 20vh;
+   width: 100%;
+   font-size: 7rem;
+   color: #000000;
+   height: 20vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .dashboardRow1 {
     width: 100%;
     display: grid;
-    grid-template-columns: 3rem 60rem 6rem 42rem 3rem; 
+    grid-template-columns: 3fr 60fr 6fr 42fr 3fr; 
     height: 8vh;
 }
-
 .title {
-    /* padding: 20px 30px; */
     margin: 8px 0;
     background: rgba(196, 196, 196, 0.5);
-    border-radius: 20px;
+    border-radius: 45px;
     grid-column: 2/3;
-    }
+    font-size: 3rem;
+    padding-left: 20px;
+    border: transparent;
+    outline: none;
+}
 .employment {
     margin: 8px 0;
     background: rgba(196, 196, 196, 0.5);
-    border-radius: 20px;
+    border-radius: 45px;
     grid-column: 4/5;
+    font-size: 3rem;
+    padding-left: 20px;
+    appearance: none;
+    border: transparent;
+    outline: none;
     }
 .dashboardRow2{
     width: 100%;
     display: grid;
-    grid-template-columns: 3rem 19rem 2rem 28rem 2rem 28rem 2rem 27rem 3rem;
+    grid-template-columns: 3fr 19fr 2fr 28fr 2fr 28fr 2fr 27fr 3fr;
     height: 8vh;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 .location{
     background: rgba(196, 196, 196, 0.5);
     border-radius: 20px;
     margin: 8px 0;
     grid-column: 2/3;
+    font-size: 3rem;
+    padding-left: 29px;
+    border: transparent;
+    outline: none;
 }
-.job{
+.jobSec{
     background: rgba(196, 196, 196, 0.5);
     border-radius: 20px;
     margin: 8px 0;
     grid-column: 4/5;
+    font-size: 3rem;
+    padding-left: 20px;
+    appearance: none;
+    border: transparent;
+    outline: none;
 }
 .workplace{
     background: rgba(196, 196, 196, 0.5);
     border-radius: 20px;
     margin: 8px 0;
     grid-column: 6/7;
+    font-size: 3rem;
+    padding-left: 20px;appearance: none;
+    border: transparent;
+    appearance: none;
 }
 .paid{
     background: rgba(196, 196, 196, 0.5);
     border-radius: 20px;
     margin: 8px 0;
     grid-column: 8/9;
+    font-size: 3rem;
+    padding-left: 20px;
+    appearance: none;
+    border: transparent;
+    outline: none;
 }
 .dashboardRow3 {
     width: 100%;
     display: grid;
-    grid-template-columns: 3rem 108rem 3rem;
-    
+    grid-template-columns: 3fr 108fr 3fr;
 }
 .shortDesc{
     margin: 70px 0px 40px 0px;
@@ -78,6 +100,10 @@ height: 20vh;
     background: rgba(196, 196, 196, 0.5);
     border-radius: 20px;
     height: 7vh;
+    font-size: 4rem;
+    padding-left: 20px;
+    border: transparent;
+    outline: none;
 }
 .addJobDesc > img{
    width: 95%;
@@ -86,113 +112,27 @@ height: 20vh;
 .dashboardSubmit_link {
     width: 100%;
     display: grid;
-    grid-template-columns: 3rem 108rem 3rem;
+    grid-template-columns: 3fr 108fr 3fr;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    text-decoration: none;
 }
 .dashboardSubmit_link > button {
-   background: #C4C4C4;
-   border-radius: 20px;
-   height: 10vh;
-    width: 10%;
-    margin-left: 85%;
-    margin-top: 2%;
-    display: inline-block;
-    grid-column: 2/3;;
+    background: #C4C4C4;
+    border-radius: 25px;
+    height: 8vh;
+    width: 9%;
+    justify-self: end;
+    grid-column: 2/3;
+    font-size: 3.5rem;
+    border: transparent;
+    font-weight: bold;
 }
 .dashboardSubmit_link > button:hover{
    cursor: pointer;
 }
-/* .title {
-position: absolute;
-width: 954px;
-height: 71px;
-left: 75px;
-top: 278px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.employment {
-    position: absolute;
-width: 528px;
-height: 71px;
-left: 1118px;
-top: 278px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.location {
-    position: absolute;
-width: 274px;
-height: 71px;
-left: 76px;
-top: 381px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.job {
-    position: absolute;
-width: 436px;
-height: 71px;
-left: 374px;
-top: 381px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.workplace {
-    position: absolute;
-width: 397px;
-height: 71px;
-left: 834px;
-top: 381px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.paid {
-    position: absolute;
-width: 397px;
-height: 71px;
-left: 1255px;
-top: 381px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.shortDesc {
-    position: absolute;
-width: 1577px;
-height: 99px;
-left: 75px;
-top: 559px;
-
-background: rgba(196, 196, 196, 0.5);
-border-radius: 20px;
-}
-.addJobDesc > img{
-    position: absolute;
-width: 1578px;
-height: 835px;
-left: 75px;
-top: 730px;
-border-radius: 20px;
+.form-control::-webkit-input-placeholder {
+    color: black;
+  }
 
 
-}
-.submit {
-    position: absolute;
-width: 233px;
-height: 92px;
-left: 1413px;
-top: 1597px;
-
-background: #C4C4C4;
-border-radius: 20px;
-} */
-.test{
-   font-size: larger;
-   height: 20vh;
-   color: #000000;
-}
