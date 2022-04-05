@@ -1,7 +1,7 @@
 import './App.css';
-import CareerDashboard from './Components/CareerDashboard';
+import CareerPage1 from './Components/CareerPage1';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import JobRoleDesc from './Components/JobRoleDesc';
+import CareerPage2 from './Components/CareerPage2';
 
 function App() {
     return (
@@ -9,10 +9,11 @@ function App() {
             <div className="App">
                 <Switch>
                     <Route path="/submit">
-                        <JobRoleDesc/>
+                        <CareerPage2/>
                          </Route>
                     <Route path="/">
-                        <CareerDashboard/>
+                        <CareerPage1/>
+                        
                     </Route>
                 </Switch>
             </div>

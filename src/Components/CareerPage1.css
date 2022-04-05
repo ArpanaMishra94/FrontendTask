@@ -1,0 +1,113 @@
+.careerDashboard{
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+}
+.careerDashboard-content{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.careerDashboard-heading{
+   font-size: 3rem;
+   color: #000000;
+   padding-bottom: 15px;
+}
+.careerDashboard-inputsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.careerDashboard-input{
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    max-width: 100%;
+    padding-left: 20px;
+    border: transparent;
+    outline: none;
+    appearance: none;
+}
+.careerDashboard-input-row1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.careerDashboard-input-row1-title {
+    flex: 2;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    height: 8vh;
+}
+.careerDashboard-input-row1-employment {
+    flex: 1;
+    margin-top: 1rem;
+    height: 8vh;
+    }
+.careerDashboard-input-row2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+.careerDashboard-input-row2-location{
+    flex: 1;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    height: 8vh;
+}
+.careerDashboard-input-row2-jobSection{
+    flex: 2;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    height: 8vh;
+}
+.careerDashboard-input-row2-workplace{
+    flex: 2;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    height: 8vh;
+}
+.careerDashboard-input-row2-paidOrGratis{
+    flex: 2;
+    margin-top: 1rem;
+    height: 8vh;
+    max-width: 100%;
+}
+.careerDashboard-input-row3-shortDesc{
+    height: 10vh;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.addJobDesc{
+    width: 100%;
+}
+.addJobDesc > img{
+   width: 100%;
+   border-radius: 20px;
+}
+.careerDashboard-submit{
+    width: 100%;
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: end;
+}
+
+.careerDashboard-submit > button {
+    background: #C4C4C4;
+    border-radius: 15px;
+    font-size: 2.2rem;
+    border: transparent;
+    font-weight: bold;
+    margin-top: 1.7rem;
+    padding: 1rem;
+}
+.careerDashboard-submit > button:hover{
+   cursor: pointer;
+}
+.form-control::-webkit-input-placeholder {
+    color: black;
+  }
+
+

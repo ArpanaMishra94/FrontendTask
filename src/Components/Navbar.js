@@ -11,13 +11,12 @@ export default function Navbar() {
             </div>
 
             <div className="navbarRightSide">
-                <div className="navbarRightSideList">
-                    <a>Our Products</a>
-                    <a>Insights</a>
-                    <a>Smart Yarn</a>
-                    <a>About</a>
-                    <a>Contact</a>
-                </div>
+                    <div className = "navbarRightSide-items">Our Products</div>
+                    <div className = "navbarRightSide-items">Insights</div>
+                    <div className = "navbarRightSide-items">Smart Yarn</div>
+                    <div className = "navbarRightSide-items">About</div>
+                    <div className = "navbarRightSide-items">Contact</div>
+                
             </div>
         </div>
     )
